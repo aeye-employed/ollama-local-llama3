@@ -22,19 +22,19 @@ Get up and running with large language models.
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 ### Important Note
-If the Ollama is not working with Open-Web UI then follw below steps:
-...
+**If the Ollama is not working with Open-Web UI then follw below steps:**
 Add "ENV OLLAMA_HOST 0.0.0.0" in "/etc/systemd/system/ollama.service" under [Service] to access Ollama through Open-webUI.
 i.e.,
+```
 vi /etc/systemd/system/ollama.service
+```
 and paste "ENV OLLAMA_HOST 0.0.0.0" under service section.
-...
-After That run below commands:
-...
+
+**After That run below commands:**
+```
 sudo systemctl daemon-reload
 sudo systemctl restart ollama.service
-...
-
+```
 [Manual install instructions](https://github.com/ollama/ollama/blob/main/docs/linux.md)
 
 ### Docker
